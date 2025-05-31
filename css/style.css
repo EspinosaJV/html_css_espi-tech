@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* || CSS RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+/* || VARIABLES */
+
+:root {
+    /* || FONT FAMILY */
+    --FF-HEADER: 'Rajdhani', Helvetica;
+
+    /* || FONT SIZE */
+    --FF-XL: clamp(0.75rem, 4vw, 3rem);
+
+    /* || COLORS */
+    --BG-COLOR: whitesmoke;
+    --FONT-COLOR: #26547C;
+    --HEADER-COLOR: #88B7D3;
+
+    /* || PADDING */
+    --HEADER-PADDING: 1rem;
+
+    /* || WIDTH VALUES */
+    --HEADER-IMG-WIDTH: 10%;
+}
+
+/* || GENERAL STYLE */
+
+html {
+    background-color: var(--BG-COLOR);
+}
+
+a {
+    text-decoration: none;
+    color: var(--FONT-COLOR);
+}
+
+a:hover,
+a:focus-within {
+    color: var(--BG-COLOR);
+}
+/* || SECTION STYLES */
+
+.header {
+    align-items: center;
+    animation: fallDown 0.8s ease-out forwards;
+    background-color: var(--HEADER-COLOR);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--HEADER-PADDING);
+    position: sticky;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.main {
+    min-height: 1920px;
+}
+
+/* || BLOCK STYLES */
+
+.header__nav {
+    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+    font-family: var(--FF-HEADER);
+    font-size: var(--FF-XL);
+    font-weight: bold;
+    opacity: 0;
+    padding-right: 1rem;
+    text-transform: uppercase;
+    transform: translateY(-20%);
+}
+
+.header__ul {
+    align-items: center;
+    display: flex;
+    gap: clamp(0.3rem, 2vw, 2rem);
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* || ELEMENT STYLES */
+
+.header__img {
+    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+    max-width: var(--HEADER-IMG-WIDTH);
+    min-width: clamp(60px, 15%, 150px);
+    opacity: 0;
+    padding-left: 1rem;
+    transform: translateY(-20%);
+}
+
+.header__ul-li {
+    font-size: var(--FF-XL);
+}
+
+/* || KEYFRAMES */
+
+/* || HEADER ANIMATIONS */
+
+@keyframes fallDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes itemFallDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
