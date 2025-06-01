@@ -26,20 +26,40 @@ img {
     /* || FONT SIZE */
     --FF-XL: clamp(0.75rem, 4vw, 3rem);
     --FF-L: clamp(0.50rem, 2vw, 2rem);
+    --FF-M: clamp(0.40rem, 1.5vw, 1.75rem);
 
     /* || COLORS */
     --BG-COLOR: whitesmoke;
     --FONT-COLOR: #26547C;
     --HEADER-COLOR: #88B7D3;
+    --BLOCK-COLOR: #D4E5EF;
+    --BUTTON-COLOR: #D4E5EF;
+    --BUTTON-ACTIVE-COLOR: #26547C;
+    --FONT-BUTTON-ACTIVE-COLOR: whitesmoke;
+    --ABOUT-BACKGROUND-COLOR: #D4E5EF;
 
     /* || PADDING */
     --HEADER-PADDING: 1rem;
+    --BLOCK-PADDING-TB: 3rem;
+    --BLOCK-PADDING-SIDE: 1.5rem;
+    --BUTTON-PADDING: clamp(0.5rem, 1vw, 2rem);
 
     /* || MARGIN */
     --MAIN-MARGIN: 1rem;
+    --BLOCK-MARGIN: clamp(2rem, 5vh, 3rem);
 
     /* || WIDTH VALUES */
     --HEADER-IMG-WIDTH: 10%;
+    --ABOUT-IMG-WIDTH: clamp(200px, 40%, 500px);
+
+    /* || BORDER VALUES */
+    --BUTTON-BORDER: 2px solid #26547C;
+
+    /* || BORDER RADIUS VALUES */
+    --BUTTON-RADIUS: 30px;
+
+    /* || BOX SHADOW VALUES */
+    --IMG-BOX-SHADOW: 5px 10px 15px rgba(38, 84, 125, 0.3);
 }
 
 /* || GENERAL STYLE */
@@ -56,6 +76,12 @@ a {
 a:hover,
 a:focus-within {
     color: var(--BG-COLOR);
+}
+
+button:hover,
+button:focus-within {
+    background-color: var(--BUTTON-ACTIVE-COLOR);
+    color: var(--FONT-BUTTON-ACTIVE-COLOR);
 }
 
 /* || UTILITY STYLES */
@@ -117,6 +143,32 @@ a:focus-within {
     position: relative;
 }
 
+.main__about {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--BLOCK-MARGIN);
+    background: var(--ABOUT-BACKGROUND-COLOR);
+    padding: var(--BLOCK-PADDING-TB) var(--BLOCK-PADDING-SIDE);
+    font-size: var(--FF-L);
+    font-family: var(--FF-HEADER);
+    text-transform: uppercase;
+    color: var(--FONT-COLOR);
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(-20%);
+    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+}
+
+.main__about__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20%);
+    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+}
+
 /* || ELEMENT STYLES */
 
 .header__img {
@@ -164,6 +216,31 @@ a:focus-within {
     position: absolute;
     top: 50%;
     transform: translateY(-20%);
+}
+
+.main__about__p {
+    text-transform: none;
+    font-size: var(--FF-M);
+}
+
+.main__about__image {
+    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+    box-shadow: var(--IMG-BOX-SHADOW);
+    opacity: 0;
+    transform: translateY(-20%);
+    width: var(--ABOUT-IMG-WIDTH);
+}
+
+.main__about__button {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--FF-BODY);
+    font-size: var(--FF-M);
+    padding: var(--BUTTON-PADDING);
+    background-color: var(--BUTTON-COLOR);
+    border: var(--BUTTON-BORDER);   
+    color: var(--FONT-COLOR);
+    border-radius: var(--BUTTON-RADIUS);
 }
 
 /* || KEYFRAMES */
