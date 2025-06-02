@@ -27,10 +27,11 @@ img {
     --FF-XL: clamp(0.75rem, 4vw, 3rem);
     --FF-L: clamp(0.50rem, 2vw, 2rem);
     --FF-M: clamp(0.40rem, 1.5vw, 1.75rem);
+    --FF-S: clamp(0.30rem, 1vw, 1.50rem);
 
     /* || COLORS */
     --BG-COLOR: whitesmoke;
-    --FONT-COLOR: #26547C;
+    --FONT-COLOR: rgb(38, 84, 124);
     --HEADER-COLOR: #88B7D3;
     --BLOCK-COLOR: #D4E5EF;
     --BUTTON-COLOR: #D4E5EF;
@@ -51,6 +52,7 @@ img {
     /* || WIDTH VALUES */
     --HEADER-IMG-WIDTH: 10%;
     --ABOUT-IMG-WIDTH: clamp(200px, 40%, 500px);
+    --LOGO-WIDTH: clamp(100px, 30%, 300px);
 
     /* || BORDER VALUES */
     --BUTTON-BORDER: 2px solid #26547C;
@@ -169,6 +171,28 @@ button:focus-within {
     animation: itemFallDown 0.6s ease-out 0.3s forwards;
 }
 
+.main__services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: var(--BLOCK-MARGIN);
+    opacity: 0;
+    transform: translateY(-20%);
+    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+}
+
+.main__services__figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--LOGO-WIDTH);
+    height: auto;
+    font-family: var(--FF-BODY);
+    font-size: var(--FF-S);
+}
+
 /* || ELEMENT STYLES */
 
 .header__img {
@@ -243,6 +267,15 @@ button:focus-within {
     border-radius: var(--BUTTON-RADIUS);
 }
 
+.main__services__h3 {
+    text-transform: uppercase;
+    margin-top: 1rem;
+    color: var(--FONT-COLOR);
+}
+
+.main__services__p {
+    margin-top: 1rem;
+}
 /* || KEYFRAMES */
 
 /* || HEADER ANIMATIONS */
