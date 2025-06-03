@@ -160,6 +160,8 @@ button:focus-within {
     opacity: 0;
     transform: translateY(-20%);
     animation: itemFallDown 0.6s ease-out 0.3s forwards;
+    animation-timeline: view();
+    animation-range: entry 20% entry 80%;
 }
 
 .main__about__text{
@@ -181,6 +183,8 @@ button:focus-within {
     opacity: 0;
     transform: translateY(-20%);
     animation: itemFallDown 0.6s ease-out 0.3s forwards;
+    animation-timeline: view();
+    animation-range: entry 20% entry 80%;
 }
 
 .main__services__figure {
@@ -209,13 +213,15 @@ button:focus-within {
     gap: 2rem;
     opacity: 0;
     transform: translateY(-20%);
-    animation: itemFallDown 0.6s ease-out 0.3s forwards;
+    animation: itemFallDown ease-out both;
+    animation-timeline: view();
+    animation-range: entry 20% entry 80%;
 }
 
 footer {
     animation: itemFallDown ease-out both;
     animation-timeline: view();
-    animation-range: entry 50% entry 100%;
+    animation-range: entry 20% entry 80%;
     transform: translateY(-20%);
     opacity: 0;
     display: flex;
@@ -261,10 +267,12 @@ footer {
 }
 
 .main__image {
-    animation: heroImageFallDown 0.6s ease-out 0.3s forwards;
+    animation: heroImageFallDown ease-out both;
     opacity: 0;
     transform: translateY(-20%);
     position: relative;
+    animation-timeline: view();
+    animation-range: entry 20% entry 80%;
 }
 
 .main__p__mission {
