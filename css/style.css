@@ -569,6 +569,7 @@ footer {
     font-size: var(--FF-S);
     text-align: center;
     flex-grow: 1;
+    color: var(--FONT-COLOR);
 }
 
 .main__about__h2 {
@@ -608,6 +609,7 @@ footer {
     text-align: left;
     margin-bottom: var(--PARAGRAPH-MARGIN);
     font-size: var(--FF-S);
+    color: var(--FONT-COLOR);
 }
 
 .about__h2 {
@@ -632,7 +634,7 @@ footer {
 .about__section__img {
     max-width: 80%;
     height: auto;
-    border: 1px solid var(--CEO-IMAGE-BORDER-COLOR);
+    border: 3px solid var(--CEO-IMAGE-BORDER-COLOR);
     border-radius: 1rem;
     padding: 0.5vw;
 }
